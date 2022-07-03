@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Fail if variables are unset
 set -eu -o pipefail
