@@ -47,7 +47,7 @@ git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git add .
 git commit -am "$COMMIT_MESSAGE"
 
-CONTEXT=${INPUT_BRANCH-master}
-[ -z $CONTEXT ] && CONTEXT='master'
+CONTEXT=${INPUT_BRANCH-trunk}
+[ -z $CONTEXT ] && CONTEXT='trunk'
 
 git push -f -q https://${TOKEN}@github.com/${REMOTE} $CONTEXT
