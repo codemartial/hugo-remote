@@ -46,6 +46,7 @@ COMMIT_MESSAGE=${INPUT_COMMIT_MESSAGE}
 [ -z $COMMIT_MESSAGE ] && COMMIT_MESSAGE="🚀 Deploy with ${GITHUB_WORKFLOW}"
 
 cd ${DEST}
+git config --global --add safe.directory /github/workspace
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git add .
