@@ -26,6 +26,7 @@ cd ${GITHUB_WORKSPACE}
 hugo version || exit 1
 
 echo '👯 Clone remote repository'
+git config --global --add safe.directory /github/workspace
 git clone https://github.com/${REMOTE} ${DEST}
 
 echo '🧹 Clean site'
